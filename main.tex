@@ -99,7 +99,7 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
             \hline % chktex 44
             \textbf{Elemento} & \textbf{Símbolo} \\
             \hline % chktex 44
-            Agua & -\\
+            Agua & --\\
             \hline % chktex 44
             Obstáculos & * \\
             \hline % chktex 44
@@ -151,98 +151,140 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
 \section{Evidencia de funcionamiento}
 
 \section{Documentación del Programa en Python}
-
-El código \textit{environment} contiene una serie de funciones que permiten crear un mapa con cuerpos de agua, obstáculos y terreno de variadas alturas de manera aleatoria, buscando generar una representación plausible de un entorno natural.
-
+El código \textit{environment} contiene una serie de funciones que permiten crear un mapa con cuerpos de agua, obstáculos y terreno de variadas alturas de manera aleatoria, buscando generar una representación plausible de un entorno natural.\\
 Las funciones implementadas otorgan al usuario la libertad de especificar la cantidad y tamaños de los cuerpos de agua, cantidad de obstáculos, altura máxima de terreno, etc.
-
     \subsection{Librerías}
         \paragraph{\textit{random}}\cite{abdugafforovna2023modules} Para la generación de coordenadas y dimensiones aleatorias apegadas a los requisitos proporcionados para el reto.
-
         \paragraph{\textit{SimpleAI}}\cite{thaker2020python} Para ejecutar algoritmos de búsqueda informadas, no informadas y locales para el agente diseñado.
-
     \subsection{Funciones}
-
         \subsubsection{\textit{init\_env (width, height)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{width (int)}}: Anchura del mapa.
+                    \item \textbf{\textit{height (int)}}: Altura del mapa.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Mapa con elementos vacíos.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Inicializa el entorno natural de la anchura y altura determinada con strings con un espacio.
         \subsubsection{\textit{square\_coordinates (top\_corner, bottom\_corner, circular)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{top\_corner}} (tupla): Coordenada de una matriz.
+                    \item \textbf{\textit{bottom\_corner}} (tupla): Coordenada de una matriz
+                    \item \textbf{\textit{circular} (booleano)}: Determina si se debe regresar un patrón circular dentro del recuadro generado entre ambas esquinas.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{coordinates}} (lista de tuplas): Lista con coordenadas dentro del recuadro formado por la coordenada \textit{top\_corner} y la coordenada \textit{bottom\_corner}.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Obtiene las coordenadas de una matriz que se encuentran dentro del recuadro formado por las esquinas proporcionadas, y elimina las esquinas del recuadro en caso de querer un patrón circular.
         \subsubsection{\textit{generate\_water\_chunks (env, water\_chunks\_sizes, percentages)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural vacío.
+                    \item \textbf{\textit{water\_chunks\_sizes} (lista de \textit{ints})}: Lista con tamaños de cada cuerpo de agua.
+                    \item \textbf{\textit{percentages} (booleano)}: Determina si los tamaños vienen en porcentaje del mapa o número de casillas.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{None}}: Modifica \textit{env} directamente.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Divide las celdas en \textit{n} secciones, donde \textit{n} representa los cuerpos de agua deseados, y selecciona aleatoriamente una celda dentro de cada una de estas secciones. A partir de esta celda de origen, se eligen aleatoriamente una anchura y altura, con las cuales se selecciona otra celda dentro de la matriz. Luego, se obtienen las coordenadas dentro del rectángulo formado por ambas celdas y se seleccionan \textit{k} coordenadas (donde \textit{k} es el número de bloques de agua) de esta lista. Estas coordenadas seleccionadas se modifican posteriormente al símbolo del agua en el entorno \textit{env}.
         \subsubsection{\textit{generate\_obstacles (env, obstacles, percentages)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural con cuerpos de agua o vacío.
+                    \item \textbf{\textit{obstacles (int)}}: Tamaño de los obstáculos.
+                    \item \textbf{\textit{percentages} (booleano)}: Determina si el tamaño viene en porcentaje del mapa o número de casillas.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{None}}: Modifica \textit{env} directamente.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Genera una lista con las celdas vacías del entorno, y selecciona \textit{k} coordenadas (donde \textit{k} es el número de obstáculos) de esta lista. Estas coordenadas seleccionadas se modifican posteriormente al símbolo de obstáculos en el entorno \textit{env}.
         \subsubsection{\textit{surrounding (env, coordinate)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural.
+                    \item \textbf{\textit{coordinate} (tupla de \textit{ints})}: Coordenada dentro de la matriz.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{surround\_boxes} (lista de \textit{strings})}: Lista con los elementos de las celdas que rodean a alguna celda, incluyendo a sí misma.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Genera un lista con los elementos de las celdas alrededor de alguna celda en la matriz. La función está adaptada para funcionar en esquinas y aristas, donde los alrededores son incompletos.
         \subsubsection{\textit{generate\_terrain (env, max\_terrain\_height)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural con cuerpos de agua y obstáculos.
+                    \item \textbf{\textit{max\_terrain\_height (int)}}: Entero que determina el nivel máximo de altura generada en el terreno.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{None}}: Modifica \textit{env} directamente.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Itera sobre las celdas de un entorno, saltándose aquellas que ya contienen agua o son obstáculos. Cuando encuentra una celda vacía, obtiene las celdas que la rodean utilizando la función \textit{surrounding}. Si entre estas celdas cercanas se encuentra agua, se cuadriplica la probabilidad de que la altura del terreno sea 1 durante la selección aleatoria de alturas. En caso contrario, calcula el promedio de alturas de las celdas vecinas y triplica la probabilidad de que la altura generada aleatoriamente esté dentro del rango de la media - 1 a la media + 1. Una vez ajustadas estas probabilidades, se elige una altura con los nuevos pesos y se modifica la coordenada actual con esa altura.
         \subsubsection{\textit{generate\_border (env)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{None}}: Modifica \textit{env} directamente.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Genera un borde alrededor del entorno dado, simulando un contorno.
         \subsubsection{\textit{remove\_border (env)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{None}}: Modifica \textit{env} directamente.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Elimina el borde alrededor del entorno dado, en caso de que este exista.
         \subsubsection{\textit{environment (width, height, water\_chunks\_sizes, w\_sizes\_percentage, obstacles, o\_size\_percentage, max\_terrain\_height, add\_border)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{width (int)}}: Anchura del mapa.
+                    \item \textbf{\textit{height (int)}}: Altura del mapa.
+                    \item \textbf{\textit{water\_chunks\_sizes} (lista de \textit{ints})}: Lista con tamaños de cada cuerpo de agua.
+                    \item \textbf{\textit{w\_sizes\_percentage} (booleano)}: Determina si los tamaños de los cuerpos de agua vienen en porcentaje del mapa o número de casillas.
+                    \item \textbf{\textit{obstacles (int)}}: Tamaño de los obstáculos.
+                    \item \textbf{\textit{o\_size\_percentage} (booleano)}: Determina si el tamaño de los obstáculos viene en porcentaje del mapa o número de casillas.
+                    \item \textbf{\textit{max\_terrain\_height (int)}}: Entero que determina el nivel máximo de altura generada en el terreno.
+                    \item \textbf{\textit{add\_border} (booleano)}: Determina si el entorno generado contiene una barrera de contorno.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural con cuerpos de agua, obstáculos y variadas alturas de terreno.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Genera un entorno con cuerpos de agua, obstáculos y terreno de altura variable, utilizando los siguientes parámetros predeterminados: un ancho de 15 bloques, una altura de 30 bloques, tres cuerpos de agua que representan el 3\% del mapa, obstáculos que representan el 5\% del mapa, y una altura máxima de terreno de 6 bloques. Estos valores pueden modificarse según la preferencia del usuario.
         \subsubsection{\textit{paint\_env (env, show\_symbols, rover\_pos)}}
-
             \paragraph{Recibe}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{env} (lista de listas de \textit{strings})}: Entorno natural.
+                    \item \textbf{\textit{show\_symbols} (booleano)}: Determina si se muestran los símbolos de los elementos en la impresión.
+                    \item \textbf{\textit{rover\_pos} (tupla de \textit{ints})}: Coordenada de ubicación del \textit{Rover} $\cdot$  Coordenada predeterminada que se encuentra fuera del entorno.
+                \end{itemize}
             \paragraph{Regresa}
-            \dots
+                \begin{itemize}
+                    \item \textbf{\textit{None}}: Imprime el entorno natural de manera estética.
+                \end{itemize}
             \paragraph{Descripción}
-
+                Imprime una versión pintada del entorno natural, utilizando códigos ANSI para dar formato a la impresión en la terminal. Los elementos del entorno, como el agua, los obstáculos y las diferencias de altura, se representan con colores de fondo diferentes para que sean fácilmente observables.
 \section{Descripción Formal del Problema}
 
 \section{Búsquedas}
