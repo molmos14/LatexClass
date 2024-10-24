@@ -8,10 +8,10 @@
 
 \title{\textbf{Estructura del documento}}
 \author[1]{Manuel Olmos Antillón}
-\author[2]{\\Ximena Serna Mendoza}
-\author[2]{\\Guillermo Ian Barbosa Martínez}
-\author[3]{\\Ismael Posadas Pichardo}
-\author[4]{\\Paolo Medrano Magaña}
+\author[2]{Ximena Serna Mendoza}
+\author[2]{Guillermo Ian Barbosa Martínez}
+\author[3]{Ismael Posadas Pichardo}
+\author[4]{Paolo Medrano Magaña}
 \affil[1]{Ingeniería en Sistemas Computacionales, Escuela de Ingeniería y Ciencias, Tecnológico de Monterrey}
 \affil[2]{Ingeniería en Ciencia de Datos y Matemáticas, Escuela de Ingeniería y Ciencias, Tecnológico de Monterrey}
 \affil[3]{Ingeniería en Nanotecnología, Escuela de Ingeniería y Ciencias, Tecnológico de Monterrey}
@@ -31,13 +31,13 @@ here you have to write the abstract
 \tableofcontents
 \section{Introducción}
 
-Este reporte representa la culminación de un proyecto dedicado a modelar en \textit{Python} al \textit{Rover Perseverance} de la NASA \cite{meeker2021twin}, enfocado en su exploración en busca de agua en Marte \cite{campo2022clasificacion}. A lo largo de diversas entregas, hemos abordado la adaptación de conceptos clave de la inteligencia artificial, como el modelo PEAS, y la aplicación de una variedad de algoritmos de búsqueda, tanto informada como no informada, para analizar su eficiencia en un entorno simulado. Se ha abordado desde la revisión inicial de la misión del \textit{Perseverance} y la descripción de su entorno, hasta el análisis detallado de algoritmos de búsquedas informadas (\textit{greedy}, costo uniforme y A*), no informadas (anchura y profundidad) y locales (\textit{hill climbing}, \textit{hill climbing with random restarts} y \textit{simulated annealing} ó recocido simulado \cite{banchs1997simulated}), y se ha explorado cómo este agente inteligente aborda su tarea en un ambiente desafiante como el marciano. En este informe, se consolidarán los hallazgos y conclusiones obtenidos a lo largo de cada etapa de este proyecto, ofreciendo una visión integral del desempeño y las capacidades del \textit{Rover Perseverance} \cite{luc1990cooperation} en su búsqueda de agua en Marte.
+Este reporte representa la culminación de un proyecto dedicado a modelar en \textit{Python} al \textit{Rover Perseverance} de la NASA \cite{meeker2021twin}, enfocado en su exploración en busca de agua en Marte\cite{campo2022clasificacion}. A lo largo de diversas entregas, hemos abordado la adaptación de conceptos clave de la inteligencia artificial, como el modelo PEAS, y la aplicación de una variedad de algoritmos de búsqueda, tanto informada como no informada, para analizar su eficiencia en un entorno simulado. Se ha abordado desde la revisión inicial de la misión del \textit{Perseverance} y la descripción de su entorno, hasta el análisis detallado de algoritmos de búsquedas informadas (\textit{greedy}, costo uniforme y A*), no informadas (anchura y profundidad) y locales (\textit{hill climbing}, \textit{hill climbing with random restarts} y \textit{simulated annealing} ó recocido simulado \cite{banchs1997simulated}), y se ha explorado cómo este agente inteligente aborda su tarea en un ambiente desafiante como el marciano. En este informe, se consolidarán los hallazgos y conclusiones obtenidos a lo largo de cada etapa de este proyecto, ofreciendo una visión integral del desempeño y las capacidades del \textit{Rover Perseverance} \cite{luc1990cooperation} en su búsqueda de agua en Marte.
 
 \section{PEAS}
 
     \subsection{Performance}\label{performance}
 
-    Como se comentó anteriormente, en esta situación el agente es un robot explorador conocido como \textit{Rover Perseverance}. De acuerdo con la NASA, esta entidad es capaz de recolectar muestras de roca y regolito con base en evaluaciones de sus características químicas, físicas, minerales y orgánicas en búsqueda de signos de vida microbiana antigua \cite{carlos2023factores, bell2021mars}. De esta manera, se espera que las almacene y, posteriormente, las deposite sobre superficie marciana para ser recuperadas en una misión futura para ser analizadas en grandes laboratorios aquí en la Tierra.
+    Como se comentó anteriormente, en esta situación el agente es un robot explorador conocido como \textit{Rover Perseverance}. De acuerdo con la NASA, esta entidad es capaz de recolectar muestras de roca y regolito con base en evaluaciones de sus características químicas, físicas, minerales y orgánicas en búsqueda de signos de vida microbiana antigua\cite{carlos2023factores, bell2021mars}. De esta manera, se espera que las almacene y, posteriormente, las deposite sobre superficie marciana para ser recuperadas en una misión futura para ser analizadas en grandes laboratorios aquí en la Tierra.
     
     \subsection{Environment}\label{environment}
 
@@ -49,7 +49,7 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
     
         \subsubsection{¿Determinista o No determinista?}
 
-        \textbf{60\% determinista}: Dados los conocimientos actuales sobre Marte, así como las determinadas rutinas o actividades de exploración sobre el cráter de Jezero específicamente, se pueden determinar numerosos estados futuros e importantes en el cráter. No obstante, es precisamente este factor de incertidumbre, así como comportamientos o fenómenos del planeta que aún podrían ser desconocidos para nosotros \cite{pardo2020geologia}. Además, eventos como las conocidas tormentas de polvo contribuyen a la aleatoriedad a la que se enfrenta el \textit{Rover} en este ambiente.
+        \textbf{60\% determinista}: Dados los conocimientos actuales sobre Marte, así como las determinadas rutinas o actividades de exploración sobre el cráter de Jezero específicamente, se pueden determinar numerosos estados futuros e importantes en el cráter. No obstante, es precisamente este factor de incertidumbre, así como comportamientos o fenómenos del planeta que aún podrían ser desconocidos para nosotros\cite{pardo2020geologia}. Además, eventos como las conocidas tormentas de polvo contribuyen a la aleatoriedad a la que se enfrenta el \textit{Rover} en este ambiente.
         
         \subsubsection{¿Episódico o No episódico?}
 
@@ -61,7 +61,7 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
     
         \subsubsection{¿Discreto o continuo?}
 
-        \textbf{Continuo}: Es irónico que, pese al ya mencionado carácter desértico de Marte, como se ha comentado anteriormente, existan procesos ya conocidos. En esta ocasión, hay uno en particular que indica una producción constante de un gas vital para procesos geológicos. Se trata del metano que, aunque no es prueba contundente de la existencia de vida microbiana, sugiere junto con otros factores de disciplinas científicas mencionadas como la geología, la química y la física, actividad en el planeta. Esta actividad, además de la generación de gas metano, puede ir desde los climas de Marte, su recepción de peligrosa radiación cósmica \cite{campillo2021arquitecturas}, etc. sugieren la carencia de un número o patrón bien definido de acciones y, ahora con el agente, percepciones que pueden verse en el planeta rojo.
+        \textbf{Continuo}: Es irónico que, pese al ya mencionado carácter desértico de Marte, como se ha comentado anteriormente, existan procesos ya conocidos. En esta ocasión, hay uno en particular que indica una producción constante de un gas vital para procesos geológicos. Se trata del metano que, aunque no es prueba contundente de la existencia de vida microbiana, sugiere junto con otros factores de disciplinas científicas mencionadas como la geología, la química y la física, actividad en el planeta. Esta actividad, además de la generación de gas metano, puede ir desde los climas de Marte, su recepción de peligrosa radiación cósmica\cite{campillo2021arquitecturas}, etc. sugieren la carencia de un número o patrón bien definido de acciones y, ahora con el agente, percepciones que pueden verse en el planeta rojo.
     
     \subsection{Actuators}\label{actuators}
 
@@ -88,8 +88,7 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
             \item SHERLOC\cite{beegle2016sherloc} y el láser ultravioleta que tienen incorporado. A pesar de que le permite al agente actuar de determinada manera para buscar objetos, también le permite sentirlos, detectarlos, y obtener información del entorno con base en ello.
             \item RIMFAX\cite{hamran2015rimfax}: un espectrómetro con rayos X que, prácticamente, permite al \textit{Rover} ver bajo la superficie con un georadar en busca de características geológicas.
             \item PIXL\cite{allwood2021pixl}: otro espectrómetro con rayos X y cámara que permite al agente medir la composición química de las rocas a una escala muy fina e incluso tomarles foto a estas y a las texturas del suelo marciano.
-            \item MOXIE: su papel como sensor radica en la detección de dióxido de carbono. Por otro lado, como se comentó en el apartado anterior, su rol como actuador es producir oxígeno propio. Es una prueba para futuros exploradores.
-        s
+            \item MOXIE:\cite{hoffman2022mars} su papel como sensor radica en la detección de dióxido de carbono. Por otro lado, como se comentó en el apartado anterior, su rol como actuador es producir oxígeno propio. Es una prueba para futuros exploradores.
         \end{itemize}
 
 \section{Representaciones}
@@ -111,22 +110,20 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
             Rover & + \\
             \hline % chktex 44
         \end{tabular}
-        \caption{Representaciones de los elementos en el mapa.}
-        \label{tabla:representaciones}
+        \caption{Representaciones de los elementos en el mapa.}\label{tabla:representaciones}
     \end{table}
 
 \section{Modelos generados}
 
     \begin{figure}[h!]
         \centering
-        \begin{subfigure}[h!]{0.45\textwidth}
+        \begin{subfigure}[!ht]{0.45\textwidth}
             \centering
             \includegraphics[scale=0.25,angle=0]{env.jpeg}
         \end{subfigure}
         \hfill
         \centering
-        \caption{Primera prueba de generación de un mundo aleatoria para el \textit{Rover Perseverance}}
-        \label{env}
+        \caption{Primera prueba de generación de un mundo aleatoria para el \textit{Rover Perseverance}}\label{env}
     \end{figure}
 
     \begin{figure}[h!]
@@ -137,8 +134,7 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
         \end{subfigure}
         \hfill
         \centering
-        \caption{Segunda prueba de generación de un mundo aleatoria para el \textit{Rover Perseverance}}
-        \label{env1}
+        \caption{Segunda prueba de generación de un mundo aleatoria para el \textit{Rover Perseverance}}\label{env1}
     \end{figure}
 
     \begin{figure}[h!]
@@ -149,8 +145,7 @@ Este reporte representa la culminación de un proyecto dedicado a modelar en \te
         \end{subfigure}
         \hfill
         \centering
-        \caption{Tercera prueba de generación de un mundo aleatoria para el \textit{Rover Perseverance}}
-        \label{env2}
+        \caption{Tercera prueba de generación de un mundo aleatoria para el \textit{Rover Perseverance}}\label{env2}
     \end{figure}
 
 \section{Evidencia de funcionamiento}
@@ -162,11 +157,9 @@ El código \textit{environment} contiene una serie de funciones que permiten cre
 Las funciones implementadas otorgan al usuario la libertad de especificar la cantidad y tamaños de los cuerpos de agua, cantidad de obstáculos, altura máxima de terreno, etc.
 
     \subsection{Librerías}
-        \paragraph{\textit{random}}
-        \cite{abdugafforovna2023modules} Para la generación de coordenadas y dimensiones aleatorias apegadas a los requisitos proporcionados para el reto.
+        \paragraph{\textit{random}}\cite{abdugafforovna2023modules} Para la generación de coordenadas y dimensiones aleatorias apegadas a los requisitos proporcionados para el reto.
 
-        \paragraph{\textit{SimpleAI}}
-        \cite{thaker2020python} Para ejecutar algoritmos de búsqueda informadas, no informadas y locales para el agente diseñado.
+        \paragraph{\textit{SimpleAI}}\cite{thaker2020python} Para ejecutar algoritmos de búsqueda informadas, no informadas y locales para el agente diseñado.
 
     \subsection{Funciones}
 
