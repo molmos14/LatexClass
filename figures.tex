@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{subcaption}
+
+\begin{document}
+
+\title{Basic LaTeX Document}
+\author{Your Name}
+\date{\today}
+
+\maketitle
+
+\section{Introduction}
+This is a basic LaTeX document with a figure.
+
+\section{Figure Example}
+Here is an example of including a figure:
+
+\section{subfigure Example}
+\begin{figure}
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.02, angle=0]{nebulosa.jpg}
+        \caption{Image A}\label{fig:a}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[b]{0.45\textwidth}
+        \centering
+        \includegraphics[scale=0.02, angle=0]{nebulosa.jpg}
+        \caption{Image B}\label{fig:b}
+    \end{subfigure}
+\end{figure}
+
+\end{document}

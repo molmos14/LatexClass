@@ -1,0 +1,323 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.10.22)  24 OCT 2024 08:01
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/c4p174n3m0/Desktop/Latex/main.tex
+(/home/c4p174n3m0/Desktop/Latex/main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
+File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count187
+\c@section=\count188
+\c@subsection=\count189
+\c@subsubsection=\count190
+\c@paragraph=\count191
+\c@subparagraph=\count192
+\c@figure=\count193
+\c@table=\count194
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+) (/usr/share/texlive/texmf-dist/tex/latex/preprint/authblk.sty
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip50
+\@affilsep=\skip51
+\c@Maxaffil=\count195
+\c@authors=\count196
+\c@affil=\count197
+) (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2024/01/07 v24.1 The Babel package
+\babel@savecnt=\count198
+\U@D=\dimen143
+\l@unhyphenated=\language8
+ (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count199
+ (/usr/share/texlive/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2021/05/27 v5.0q Spanish support from the babel system
+\es@quottoks=\toks18
+\es@quotdepth=\count266
+Package babel Info: Making " an active character on input line 570.
+Package babel Info: Making . an active character on input line 675.
+Package babel Info: Making < an active character on input line 722.
+Package babel Info: Making > an active character on input line 722.
+)) (/usr/share/texlive/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex
+Package babel Info: Importing font and identification data for spanish
+(babel)             from babel-es.ini. Reported on input line 11.
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen144
+\captionmargin=\dimen145
+\caption@leftmargin=\dimen146
+\caption@rightmargin=\dimen147
+\caption@width=\dimen148
+\caption@indent=\dimen149
+\caption@parindent=\dimen150
+\caption@hangindent=\dimen151
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count267
+\c@continuedfloat=\count268
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count269
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count270
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count271
+\mult@box=\box51
+\multicol@leftmargin=\dimen152
+\c@unbalance=\count272
+\c@collectmore=\count273
+\doublecol@number=\count274
+\multicoltolerance=\count275
+\multicolpretolerance=\count276
+\full@width=\dimen153
+\page@free=\dimen154
+\premulticols=\dimen155
+\postmulticols=\dimen156
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
+\partial@page=\box52
+\last@line=\box53
+\mc@boxedresult=\box54
+\maxbalancingoverflow=\dimen157
+\mult@rightbox=\box55
+\mult@grightbox=\box56
+\mult@firstbox=\box57
+\mult@gfirstbox=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\c@minrows=\count277
+\c@columnbadness=\count278
+\c@finalcolumnbadness=\count279
+\last@try=\dimen158
+\multicolovershoot=\dimen159
+\multicolundershoot=\dimen160
+\mult@nat@firstbox=\box95
+\colbreak@box=\box96
+\mc@col@check@num=\count280
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count281
+\l__pdf_internal_box=\box97
+) (./main.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
+LaTeX Font Info:    ... okay on input line 22.
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count282
+\scratchdimen=\dimen161
+\scratchbox=\box98
+\nofMPsegments=\count283
+\nofMParguments=\count284
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count285
+\MPscratchDim=\dimen162
+\MPnumerator=\count286
+\makeMPintoPDFobject=\count287
+\everyMPtoPDFconversion=\toks20
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Info: Redefining \. on input line 22.
+LaTeX Info: Redefining \% on input line 22.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <14.4> on input line 24.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 24.
+ [1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.toc
+LaTeX Info: Redefining \. on input line 1.
+LaTeX Info: Redefining \% on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 4.
+
+Overfull \hbox (4.99411pt too wide) in paragraph at lines 29--29
+ [][] []\OT1/cmr/m/it/12 generate[]water[]chunks (env, wa-ter[]chunks[]sizes, per-cen- 
+ []
+
+
+Overfull \hbox (61.54462pt too wide) in paragraph at lines 53--53
+ [][] []\OT1/cmr/m/it/12 environment (width, height, wa-ter[]chunks[]sizes, w[]sizes[]percentage, 
+ []
+
+
+Overfull \hbox (14.66432pt too wide) in paragraph at lines 53--53
+ \OT1/cmr/m/it/12 obs-ta-cles, o[]size[]percentage, max[]terrain[]height, add[]border) []  
+ []
+
+[2])
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [3] [4] [5] [6]
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<env.jpeg, id=26, 416.55624pt x 513.92pt>
+File: env.jpeg Graphic file (type jpg)
+<use env.jpeg>
+Package pdftex.def Info: env.jpeg  used on input line 124.
+(pdftex.def)             Requested size: 104.1388pt x 128.47968pt.
+[7]
+<env1.jpeg, id=31, 422.57875pt x 609.27625pt>
+File: env1.jpeg Graphic file (type jpg)
+<use env1.jpeg>
+Package pdftex.def Info: env1.jpeg  used on input line 136.
+(pdftex.def)             Requested size: 105.64442pt x 152.31868pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<env2.jpeg, id=32, 1022.82124pt x 613.29124pt>
+File: env2.jpeg Graphic file (type jpg)
+<use env2.jpeg>
+Package pdftex.def Info: env2.jpeg  used on input line 148.
+(pdftex.def)             Requested size: 163.65474pt x 98.1286pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[8 <./env.jpeg>] [9 <./env1.jpeg> <./env2.jpeg>] [10]
+Overfull \hbox (58.12837pt too wide) in paragraph at lines 237--237
+[]\OT1/cmr/bx/it/12 environment (width, height, wa-ter[]chunks[]sizes, w[]sizes[]percentage,
+ []
+
+
+Overfull \hbox (16.58595pt too wide) in paragraph at lines 237--237
+\OT1/cmr/bx/it/12 obs-ta-cles, o[]size[]percentage, max[]terrain[]height, add[]border) 
+ []
+
+[11]
+<anchuram1ruta.jpeg, id=46, 662.475pt x 616.3025pt>
+File: anchuram1ruta.jpeg Graphic file (type jpg)
+<use anchuram1ruta.jpeg>
+Package pdftex.def Info: anchuram1ruta.jpeg  used on input line 273.
+(pdftex.def)             Requested size: 165.61835pt x 154.07524pt.
+<anchuram1g.jpeg, id=47, 873.2625pt x 1132.23pt>
+File: anchuram1g.jpeg Graphic file (type jpg)
+<use anchuram1g.jpeg>
+Package pdftex.def Info: anchuram1g.jpeg  used on input line 284.
+(pdftex.def)             Requested size: 174.6494pt x 226.44199pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[12 <./anchuram1ruta.jpeg>] [13 <./anchuram1g.jpeg>] (./main.bbl
+Underfull \hbox (badness 1062) in paragraph at lines 19--22
+[]\OT1/cmr/m/n/12 Luther Bee-gle and Rohit Bhar-tia.  Sher-loc: an in-ves-ti-ga-tion for
+ []
+
+[14] [15]) [16] (./main.aux
+LaTeX Info: Redefining \. on input line 8.
+LaTeX Info: Redefining \% on input line 8.
+)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-22>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 4536 strings out of 476120
+ 78968 string characters out of 5793656
+ 1934975 words of memory out of 5000000
+ 26541 multiletter control sequences out of 15000+600000
+ 564858 words of font info for 58 fonts, out of 8000000 for 9000
+ 40 hyphenation exceptions out of 8191
+ 57i,11n,65p,1393b,414s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on main.pdf (16 pages, 620113 bytes).
+PDF statistics:
+ 91 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+

@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99d (TeX Live 2023/Debian)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+The style file: plain.bst
+Database file #1: pruebabib.bib
+Warning--empty journal in campillo2021arquitecturas
+Warning--empty journal in campo2022clasificacion
+Warning--empty journal in carlos2023factores
+Warning--empty journal in pardo2020geologia
+You've used 16 entries,
+            2118 wiz_defined-function locations,
+            589 strings with 7835 characters,
+and the built_in function-call counts, 6686 in all, are:
+= -- 631
+> -- 442
+< -- 5
++ -- 180
+- -- 160
+* -- 504
+:= -- 1141
+add.period$ -- 50
+call.type$ -- 16
+change.case$ -- 121
+chr.to.int$ -- 0
+cite$ -- 20
+duplicate$ -- 221
+empty$ -- 413
+format.name$ -- 160
+if$ -- 1347
+int.to.chr$ -- 0
+int.to.str$ -- 16
+missing$ -- 16
+newline$ -- 83
+num.names$ -- 32
+pop$ -- 125
+preamble$ -- 1
+purify$ -- 105
+quote$ -- 0
+skip$ -- 179
+stack$ -- 0
+substring$ -- 343
+swap$ -- 58
+text.length$ -- 5
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 64
+warning$ -- 4
+while$ -- 55
+width$ -- 18
+write$ -- 171
+(There were 4 warnings)

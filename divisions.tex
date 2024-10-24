@@ -1,0 +1,86 @@
+\documentclass{article}
+\usepackage{array}
+
+\begin{document}
+
+Este es un documento de ejemplo que muestra diferentes formas de escribir divisiones en \LaTeX.
+\\
+
+% Este es un ejemplo usando notación \[ \dots \]:
+\textbf{notación con \texttt{\textbackslash[ \dots \textbackslash]}:}
+\[ \frac{1}{2} \]
+
+% Primero, usando la notación \( \dots \):
+\textbf{notación con \texttt{\textbackslash( \dots \textbackslash)}:}
+\( \frac{a}{b} \)
+\\
+
+% Segundo, usando la notación $ \dots $:
+\textbf{notación con \texttt{\$ \dots \$}:}
+$ \frac{c}{d} $
+\\
+
+% Tercero, usando el entorno \texttt{math}:
+\textbf{notación con \texttt{math}:}
+\begin{math}
+\frac{e}{f}
+\end{math}
+\\
+
+\noindent Para cuando te piden que no exista identación en el párrafo, se puede usar \texttt{\textbackslash noindent}:
+\\
+
+No se recomienda colocar estos espacios \texttt{\textbackslash hspace\{1cm\}} en el código, ya que se pueden perder en la compilación.
+Al igual que con \texttt{\textbackslash vspace\{1cm\}}.
+\\ \\
+
+\textbf{Ejemplos de fracciones}
+
+En el centro sin numerar, no se puede referenciar:
+    \[\frac{1}{2} = 2^{-1}\]
+    \begin{displaymath}
+        \left( \frac{1}{2} \right) = 2^{-1}
+        % Este es un ejemplo de cómo se puede escribir una fracción en el centro de la página. con parentesis
+    \end{displaymath}
+
+Ecuación centrada y Numerada, se puede referenciar:
+{\Huge
+\begin{equation}
+    \frac{1}{2} = 2^{-1}
+    \label{eq:fraccion} % para que sirve eq:fraccion ? Es para referenciar la ecuación
+\end{equation}}
+\\ \\
+
+Texto encuación (\ref{eq:fraccion}) centrada y numerada: 
+    $\partial{f(x)}$ texto texto texto \dots
+\\
+
+\noindent Numeros raros ejemplos:
+$\int_{1}^{1}  \,dx$,
+$\sum_{n = 1}^{\infty}$,
+$\prod_{n = 1}^{\infty}$,
+$\lim_{x \to 0}$.
+\\ \\
+
+\noindent Un ejemplo de una matriz de ecuaciones alineada sería usando array:
+\[
+\begin{array}{c}
+    x + y = 1 \\
+    x - y = 2
+\end{array}
+\]
+\\
+Otro ejemplo:
+
+\begin{eqnarray}
+    y &= x^2 + 2x + 1 \\
+    y &= (x + 1)^2 \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+    y &=& x^2 + 2x + 1 \\
+    y &=& (x + 1)^2 \nonumber
+\end{eqnarray}
+% para que sirve el &=& ? Es para alinear las ecuaciones
+
+\end{document}
